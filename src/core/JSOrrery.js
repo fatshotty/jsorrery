@@ -28,6 +28,8 @@ function getInitialSettings() {
 
 
 export default class JSOrrery {
+
+
 	constructor(rootElementId) {
 		this.rootElement = (rootElementId && document.getElementById(rootElementId)) || document.body;
 		this.preloader = new Preloader(this.rootElement);
@@ -37,6 +39,8 @@ export default class JSOrrery {
 
 		const defaultParams = Object.assign({}, getInitialSettings());
 		this.gui.setDefaults(defaultParams);
+
+		this.ScenarioLoader = ScenarioLoader;
 
 		const scenarios = ScenarioLoader.getList();
 		const scenarioChanger = this.gui.addDropdown(SCENARIO_ID, () => {
