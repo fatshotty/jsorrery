@@ -31,6 +31,12 @@ export default {
 	DefaultScenarios
 }
 
+module.exports = {
+	JSOrrery,
+	Scenarios: JSOrrery.Scenarios,
+	DefaultScenarios
+};
+
 // TEST
 // const scens = DefaultScenarios;
 // const index = 15;
