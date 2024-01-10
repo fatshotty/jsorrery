@@ -35068,7 +35068,16 @@
             function t(e) {
                 var i = this;
                 r(this, t),
-                this.rootElement = e && document.getElementById(e) || document.body,
+                if ( e ) {
+                    if ( typeof e == 'string') {
+                        this.rootElement = document.getElementById(e);
+                    } else {
+                        this.rootElement = e
+                    }
+                } else {
+                    this.rootElement = document.body;
+                }
+                // this.rootElement = e && document.getElementById(e) || document.body,
                 this.preloader = new v.default(this.rootElement),
                 this.preloader.remove(),
                 this.gui = new u.default;
