@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mgvez/jsorrery.git"
+    "url": "git+https://github.com/fatshotty/jsorrery.git"
   },
   "scripts": {
     "start": "node server.js",
