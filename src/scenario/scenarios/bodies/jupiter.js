@@ -8,7 +8,7 @@ export const jupiter = {
 	mass: 1.8986e27,
 	radius: 71492,
 	color: '#ff9932',
-	map: './assets/img/jupitermap.jpg',
+	map: 'https://mgvez.github.io/jsorrery/assets/img/jupitermap.jpg',
 	orbit: {
 		base: {
 			a: 5.20288700 * AU, 

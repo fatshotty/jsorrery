@@ -7,12 +7,12 @@ export const saturn = {
 	mass: 5.6846e26,
 	radius: 58232,
 	color: '#ffcc99',
-	map: './assets/img/saturnmap.jpg',
+	map: 'https://mgvez.github.io/jsorrery/assets/img/saturnmap.jpg',
 	tilt: 26.7,
 	ring: {
 		innerRadius: 74500,
 		outerRadius: 117580,
-		map: './assets/img/saturnrings.png',
+		map: 'https://mgvez.github.io/jsorrery/assets/img/saturnrings.png',
 	},
 	orbit: {
 		base: {

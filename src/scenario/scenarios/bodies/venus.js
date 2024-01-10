@@ -7,7 +7,7 @@ export const venus = {
 	mass: 4.868e24,
 	radius: 6051,
 	color: '#fda700',
-	map: './assets/img/venusmap.jpg',
+	map: 'https://mgvez.github.io/jsorrery/assets/img/venusmap.jpg',
 	orbit: {
 		base: {
 			a: 0.72333566 * AU,

@@ -7,7 +7,7 @@ export const neptune = {
 	mass: 1.0243e26,
 	radius: 24764,
 	color: '#3299ff',
-	map: './assets/img/neptunemap.jpg',
+	map: 'https://mgvez.github.io/jsorrery/assets/img/neptunemap.jpg',
 	orbit: {
 		base: {
 			a: 30.06992276 * AU,

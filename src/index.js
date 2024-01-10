@@ -1,17 +1,40 @@
 
 import $ from 'jquery';
 import 'style-loader!./scss/master.scss';
+import '../assets/data/elp.js'
+import '../assets/data/vsop-earth.js'
 
 import JSOrrery from './core/JSOrrery';
 
-//shim jquery plugins
-window.$ = $;
 require('jquery-mousewheel');
 
 if (!window.WebGLRenderingContext) {
-	const msgCont = (document.querySelectorAll('#preload .title'))[0];
-	msgCont.innerHTML = '<h3>Your browser does not support WebGL. Please visit <a href="http://get.webgl.org/">webgl.org</a></h3>';
+	console.warn('WebGLRenderingContext is not suppoerted');
 }
 
-window.JSOrrery = JSOrrery;
-if (window.onJsOrreryLoaded) window.onJsOrreryLoaded(JSOrrery);
+const DefaultScenarios = [
+		'SolarSystem',
+		'SolarSystemDwarves',
+		'InnerSolarSystem',
+		'Apollo',
+		'EarthMoon',
+		'Artificial',
+		'JupiterMoon',
+		'NEO',
+		'BigJupiter',
+		'MoonSoi'
+	];
+
+export default {
+	JSOrrery,
+	Scenarios: JSOrrery.Scenarios,
+	DefaultScenarios
+}
+
+// TEST
+// const scens = DefaultScenarios;
+// const index = 15;
+// const jsOrrery = new JSOrrery();
+// const scene = JSOrrery.Scenarios.getList().find(e => e.name == scens[index] ) || JSOrrery.Scenarios.getList()[0];
+// jsOrrery.loadScenario(scene);
+// window.P = JSOrrery;

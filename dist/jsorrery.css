@@ -62,7 +62,6 @@ body#jsorrery {
 
 .planetLabel {
   cursor: default !important;
-  -moz-user-select: -moz-none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -80,7 +79,6 @@ body#jsorrery {
 
 .eventLabel {
   cursor: default !important;
-  -moz-user-select: -moz-none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -111,7 +109,6 @@ body#jsorrery {
 
 .planetSpot {
   cursor: default !important;
-  -moz-user-select: -moz-none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;

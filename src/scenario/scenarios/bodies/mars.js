@@ -7,7 +7,7 @@ export const mars = {
 	mass: 6.4185e23,
 	radius: 3376,
 	color: '#ff3300',
-	map: './assets/img/mars_1k_color.jpg',
+	map: 'https://mgvez.github.io/jsorrery/assets/img/mars_1k_color.jpg',
 	siderealDay: 1.025957 * DAY,
 	orbit: {
 		base: {

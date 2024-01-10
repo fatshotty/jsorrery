@@ -7,7 +7,7 @@ export const pluto = {
 	mass: 1.305e22 + 1.52e21,
 	radius: 1153,
 	color: '#aaaaaa',
-	map: './assets/img/plutomap1k.jpg',
+	map: 'https://mgvez.github.io/jsorrery/assets/img/plutomap1k.jpg',
 	orbit: {
 		base: {
 			a: 39.48211675 * AU,

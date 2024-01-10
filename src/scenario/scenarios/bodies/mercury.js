@@ -7,7 +7,9 @@ export const mercury = {
 	mass: 3.3022e23,
 	radius: 2439,
 	color: '#588a7b',
-	map: './assets/img/mercurymap.jpg',
+	// map: './assets/img/mercurymap.jpg',
+	map: 'https://mgvez.github.io/jsorrery/assets/img/mercurymap.jpg',
+
 	orbit: { 
 		base: {
 			a: 0.38709927 * AU,

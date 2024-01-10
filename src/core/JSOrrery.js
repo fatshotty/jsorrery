@@ -29,9 +29,18 @@ function getInitialSettings() {
 
 export default class JSOrrery {
 
+	static Scenarios = ScenarioLoader
 
 	constructor(rootElementId) {
-		this.rootElement = (rootElementId && document.getElementById(rootElementId)) || document.body;
+
+		if ( typeof rootElementId == "string") {
+			this.rootElement = document.getElementById(rootElementId);
+		} else if ( rootElementId ) {
+			this.rootElement = rootElementId;
+		} else {
+			this.rootElement = document.body;
+		}
+
 		this.preloader = new Preloader(this.rootElement);
 
 		this.preloader.remove();
@@ -40,7 +49,7 @@ export default class JSOrrery {
 		const defaultParams = Object.assign({}, getInitialSettings());
 		this.gui.setDefaults(defaultParams);
 
-		this.ScenarioLoader = ScenarioLoader;
+		this.Scenarios = ScenarioLoader;
 
 		const scenarios = ScenarioLoader.getList();
 		const scenarioChanger = this.gui.addDropdown(SCENARIO_ID, () => {
@@ -99,5 +108,17 @@ export default class JSOrrery {
 		}).then(() => {
 			return this.activeScenario;
 		});
+	}
+
+	play() {
+		if ( this.activeScenario ) {
+			this.activeScenario.scene.universe.playing = true;
+		}
+	}
+
+	pause() {
+		if ( this.activeScenario ) {
+			this.activeScenario.scene.universe.playing = false;
+		}
 	}
 };

@@ -6,7 +6,9 @@ import Constellations from '../data/Constellations';
 import { DEG_TO_RAD } from '../core/constants';
 import ResourceLoader from '../loaders/ResourceLoader';
 
-const dataSrc = './assets/data/milkyway_heasarc_204k.json';
+// const dataSrc = './assets/data/milkyway_heasarc_204k.json';
+const dataSrc = 'https://mgvez.github.io/jsorrery/assets/data/milkyway_heasarc_204k.json';
+
 
 //keys of the loaded array
 const NAME = 0;
@@ -157,7 +159,8 @@ export default class MilkyWay {
 		const onDataLoaded = ResourceLoader.loadJSON(dataSrc);
 		const onShaderLoaded = ResourceLoader.loadShaders('stars');
 
-		const starTextureLoader = ResourceLoader.loadTexture('./assets/img/star.png');
+		// const starTextureLoader = ResourceLoader.loadTexture('./assets/img/star.png');
+		const starTextureLoader = ResourceLoader.loadTexture('https://mgvez.github.io/jsorrery/assets/img/star.png');
 		
 		this.onLoaded = Promise.all([onShaderLoaded, onDataLoaded, starTextureLoader]).then(response => {
 			const [shaderResponse, dataResponse, textureResponse] = response;

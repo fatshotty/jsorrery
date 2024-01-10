@@ -22,7 +22,7 @@ export const earth = {
 	radius: 3443.9307 * NM_TO_KM,
 	color: '#1F7CDA',
 	//voir https://visibleearth.nasa.gov/view_cat.php?categoryID=1484 pour changer
-	map: './assets/img/earthmap1k_clouds.jpg',
+	map: 'https://mgvez.github.io/jsorrery/assets/img/earthmap1k_clouds.jpg',
 	material: {
 		specular: new Color('grey'),
 	},

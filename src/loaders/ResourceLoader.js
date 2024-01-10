@@ -4,7 +4,8 @@ import { TextureLoader } from 'three';
 import $ from 'jquery';
 import Promise from 'bluebird';
 
-const SHADER_PATH = './assets/shaders/';
+// const SHADER_PATH = './assets/shaders/';
+const SHADER_PATH = 'https://mgvez.github.io/jsorrery/assets/shaders/';
 const SHADER_TYPES = [
 	{
 		ext: 'vsh',
