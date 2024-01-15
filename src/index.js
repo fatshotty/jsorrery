@@ -25,16 +25,20 @@ const DefaultScenarios = [
 		'MoonSoi'
 	];
 
-export default {
+const OBJ = {
 	JSOrrery,
 	Scenarios: JSOrrery.Scenarios,
 	DefaultScenarios
-}
+};
 
-// TEST
+export default OBJ;
+
+
+window.JSORRERY = OBJ;
+
+// EXAMPLE CODE
+
 // const scens = DefaultScenarios;
-// const index = 15;
 // const jsOrrery = new JSOrrery();
-// const scene = JSOrrery.Scenarios.getList().find(e => e.name == scens[index] ) || JSOrrery.Scenarios.getList()[0];
-// jsOrrery.loadScenario(scene);
+// jsOrrery.loadScenario( JSOrrery.Scenarios.getList()[0]);
 // window.P = JSOrrery;

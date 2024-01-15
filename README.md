@@ -1,3 +1,18 @@
+# JS-Orrery Home Assistant Card
+Download `js-orrery-ha-card.js` and put it in `/www/` folder. Reference it in resources section in your Home Assistant.
+
+### Use the card
+Just create a card and use this configuration:
+```
+type: 'custom:jsorrery-card'
+autoplay: true / false
+scenario: SolarSystem / SolarSystemDwarves / InnerSolarSystem / Apollo / EarthMoon / Artificial / JupiterMoon / NEO / BigJupiter / MoonSoi
+```
+
+
+##### NOTE:
+this card uses WebGL and could make your browser/app unresponsive
+
 # jsOrrery
 
 jsOrrery is a Solar System / orbital mechanics simulation, or orrery, that I wrote in WebGL and Javascript. The main feature of jsOrrery is that the planets positions are accurate in regards to the date you set, and it has the consequence that you can observe things that happen in the real Solar System.
