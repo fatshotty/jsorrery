@@ -39,17 +39,17 @@ export default class JSOrreryScene {
 		this.root = new Scene();
 		DebugPoint.setContainer(this.root);
 
-		renderer = renderer || new WebGLRenderer({
+		this.renderer = this.renderer || new WebGLRenderer({
 			antialias: true,
 			preserveDrawingBuffer: true,
 			alpha: true,
 		});
 
-		if (IS_CAPTURE) this.screenshot = Object.create(Screenshot).init(renderer);
+		if (IS_CAPTURE) this.screenshot = Object.create(Screenshot).init(this.renderer);
 
 		//renderer.shadowMapEnabled = true;
-		renderer.setSize(this.width, this.height);
-		renderer.setPixelRatio(window.devicePixelRatio);
+		this.renderer.setSize(this.width, this.height);
+		this.renderer.setPixelRatio(window.devicePixelRatio);
 
 		const light = new AmbientLight(0x202020);
 		this.root.add(light);/**/
@@ -62,7 +62,7 @@ export default class JSOrreryScene {
 			// $('body').append(stats.domElement);
 		}
 
-		this.domEl.appendChild(renderer.domElement);
+		this.domEl.appendChild(this.renderer.domElement);
 		
 		//planet scale
 		gui.addSlider(PLANET_SCALE_ID, { min: 1, max: 100, initial: (scenario.forcedGuiSettings && scenario.forcedGuiSettings.scale) || 10 }, val => {
@@ -125,7 +125,7 @@ export default class JSOrreryScene {
 		const cam = this.cameraManager.getCamera();
 		if (this.sun) this.sun.draw(cam, camPos);
 
-		renderer.render(this.root, cam);
+		this.renderer.render(this.root, cam);
 		if (this.screenshot) this.screenshot.capture();
 
 		//place planets labels. We need the camera position relative to the world in order to compute planets screen sizes, and hide/show labels depending on it

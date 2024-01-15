@@ -25,17 +25,16 @@ const DefaultScenarios = [
 		'MoonSoi'
 	];
 
-export default {
-	JSOrrery,
-	Scenarios: JSOrrery.Scenarios,
-	DefaultScenarios
-}
-
-module.exports = {
+const OBJ = {
 	JSOrrery,
 	Scenarios: JSOrrery.Scenarios,
 	DefaultScenarios
 };
+
+export default OBJ;
+
+
+window.JSORRERY = OBJ;
 
 // TEST
 // const scens = DefaultScenarios;
