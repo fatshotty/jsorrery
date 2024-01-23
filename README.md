@@ -1,8 +1,10 @@
 # JS-Orrery Home Assistant Card
-Download `js-orrery-ha-card.js` and put it in `/www/` folder. Reference it in resources section in your Home Assistant.
+Download `js-orrery-ha-card.js` and put it in `/www/` folder. Reference it in resources section in your Home Assistant: `/local/js-orrery-ha-card.js`
+Then reload Home Assistant
 
 ### Use the card
 Just create a card and use this configuration:
+
 ```
 type: 'custom:jsorrery-card'
 autoplay: true / false
